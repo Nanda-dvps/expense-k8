@@ -32,6 +32,13 @@ spec:
       containers:
       - name: backend
         image: nanda7/backend:v1
+        resources:
+          requests:
+            cpu: 100m
+            memory: 128mi
+          limits:
+            cpu: 100m
+            memory: 128mi
         envFrom:
         - configMapRef:
             name: backend
